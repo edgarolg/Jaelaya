@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfsc5byi0ep58"
-path="res://.godot/imported/reportero.png-0feb6f8e1af46446eb3684eea8b40cf8.ctex"
+uid="uid://dpr1yggowcxq7"
+path="res://.godot/imported/Grass.png-849c8a020b90a963872162cf5e1703b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/reportero.png"
-dest_files=["res://.godot/imported/reportero.png-0feb6f8e1af46446eb3684eea8b40cf8.ctex"]
+source_file="res://assets/environment/Grass.png"
+dest_files=["res://.godot/imported/Grass.png-849c8a020b90a963872162cf5e1703b7.ctex"]
 
 [params]
 
