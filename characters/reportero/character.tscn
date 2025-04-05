@@ -1,58 +1,58 @@
 [gd_scene load_steps=18 format=3 uid="uid://fh03qcw7u2dp"]
 
-[ext_resource type="Script" uid="uid://0uevsm804t0e" path="res://movimiento_reportero.gd" id="1_qqr4u"]
-[ext_resource type="Texture2D" uid="uid://cfsc5byi0ep58" path="res://assets/characters/reportero.png" id="2_3fwhk"]
+[ext_resource type="Script" uid="uid://0uevsm804t0e" path="res://characters/reportero/movimiento_reportero.gd" id="1_rcl3f"]
+[ext_resource type="Texture2D" uid="uid://cfsc5byi0ep58" path="res://assets/characters/reportero.png" id="2_suyfy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dbt2c"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(234, 0, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_45c4e"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(351, 0, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2r6t"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(468, 0, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2mjt"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(117, 0, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j52mm"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(0, 0, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0jr61"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(351, 277, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_okurh"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(468, 277, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_552ah"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(117, 277, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0o1n8"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(0, 277, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q56mv"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(351, 554, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x4w27"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(468, 554, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iri2a"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(117, 554, 117, 277)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lkg3e"]
-atlas = ExtResource("2_3fwhk")
+atlas = ExtResource("2_suyfy")
 region = Rect2(0, 554, 117, 277)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uodr7"]
@@ -116,7 +116,7 @@ animations = [{
 size = Vector2(53.8889, 211.094)
 
 [node name="Reportero" type="CharacterBody2D"]
-script = ExtResource("1_qqr4u")
+script = ExtResource("1_rcl3f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -1)
