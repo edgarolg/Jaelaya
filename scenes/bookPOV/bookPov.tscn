@@ -1,9 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp81a3git0p3j"]
+[gd_scene load_steps=5 format=3 uid="uid://dp81a3git0p3j"]
 
 [ext_resource type="Script" uid="uid://bcm387s52r470" path="res://scenes/bookPOV/book_pov.gd" id="1_ayeji"]
 [ext_resource type="PackedScene" uid="uid://dlgfwusv8kw4v" path="res://scenes/caveRuning/CaveRun.tscn" id="2_w2bvv"]
+[ext_resource type="Texture2D" uid="uid://dt0cv30s34ikb" path="res://assets/environment/cave/background.jpg" id="3_ntbou"]
+[ext_resource type="Texture2D" uid="uid://b2jpau01cbpcp" path="res://scenes/bookPOV/libroInterior.jpg" id="4_34pa7"]
 
 [node name="BookPov" type="Node2D"]
 script = ExtResource("1_ayeji")
 scene_to_change = ExtResource("2_w2bvv")
-time = 3
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-13, -4)
+scale = Vector2(1.40963, 1.40963)
+texture = ExtResource("3_ntbou")
+
+[node name="LibroInterior" type="Sprite2D" parent="."]
+position = Vector2(2, 1)
+scale = Vector2(2.51239, 2.51239)
+texture = ExtResource("4_34pa7")
+
+[node name="Camera2D" type="Camera2D" parent="."]

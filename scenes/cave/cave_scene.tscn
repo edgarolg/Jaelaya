@@ -1,14 +1,15 @@
-[gd_scene load_steps=14 format=4 uid="uid://5nwvo7k5lkuo"]
+[gd_scene load_steps=17 format=4 uid="uid://5nwvo7k5lkuo"]
 
 [ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="1_83vmg"]
 [ext_resource type="Texture2D" uid="uid://drdbpd4govddg" path="res://assets/environment/cave/caveEntrance.png" id="2_83vmg"]
 [ext_resource type="Texture2D" uid="uid://dt0cv30s34ikb" path="res://assets/environment/cave/background.jpg" id="2_a1jof"]
 [ext_resource type="AudioStream" uid="uid://5xla7kk65kyl" path="res://assets/musica/musica_cueva.mp3" id="4_swivv"]
-[ext_resource type="Texture2D" uid="uid://tckcosj401ga" path="res://assets/libro.webp" id="5_0lmpb"]
-[ext_resource type="Texture2D" uid="uid://cplp12mg5eddy" path="res://assets/antorcha.png" id="6_g7aaj"]
-[ext_resource type="Script" uid="uid://chp7128siyr73" path="res://scenes/cave/libro.gd" id="6_jro0q"]
-[ext_resource type="Texture2D" uid="uid://dvf0wsjh4tkx2" path="res://scenes/cave/Untitled design (3).png" id="7_g7aaj"]
+[ext_resource type="Texture2D" uid="uid://tckcosj401ga" path="res://assets/environment/cave/libro.webp" id="5_0lmpb"]
 [ext_resource type="PackedScene" uid="uid://dp81a3git0p3j" path="res://scenes/bookPOV/bookPov.tscn" id="5_h0s1t"]
+[ext_resource type="Texture2D" uid="uid://cplp12mg5eddy" path="res://assets/environment/cave/antorcha.png" id="6_g7aaj"]
+[ext_resource type="Texture2D" uid="uid://dvf0wsjh4tkx2" path="res://scenes/cave/Untitled design (3).png" id="7_g7aaj"]
+[ext_resource type="Texture2D" uid="uid://db8aevd4ulm32" path="res://assets/environment/Untitled design (4).png" id="7_oxgnc"]
+[ext_resource type="Texture2D" uid="uid://te1cl8tkikpc" path="res://assets/environment/cave/minecart.png" id="10_153bs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0s1t"]
 texture = ExtResource("2_a1jof")
@@ -13673,9 +13674,6 @@ func _on_body_entered(body):
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0s1t"]
 size = Vector2(66, 83.3125)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7aaj"]
-size = Vector2(313.869, 144.695)
-
 [node name="CaveScene" type="Node2D"]
 
 [node name="Reportero" parent="." instance=ExtResource("1_83vmg")]
@@ -13709,18 +13707,6 @@ tile_set = SubResource("TileSet_a1jof")
 stream = ExtResource("4_swivv")
 volume_db = 6.0
 autoplay = true
-
-[node name="Libro" type="CharacterBody2D" parent="."]
-position = Vector2(2528, 471)
-scale = Vector2(0.179688, 0.179688)
-script = ExtResource("6_jro0q")
-
-[node name="Sprite2D" type="Sprite2D" parent="Libro"]
-texture = ExtResource("5_0lmpb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Libro"]
-position = Vector2(4.45605, -5.5647)
-shape = SubResource("RectangleShape2D_g7aaj")
 
 [node name="UntitledDesign(2)" type="Sprite2D" parent="."]
 position = Vector2(669, 270)
@@ -13758,17 +13744,39 @@ scale = Vector2(0.706401, 0.706401)
 texture = ExtResource("7_g7aaj")
 
 [node name="UntitledDesign(3)" type="Sprite2D" parent="UntitledDesign(3)/UntitledDesign(3)/UntitledDesign(3)"]
-position = Vector2(31051.1, 5333.93)
+position = Vector2(31051.1, 5262.49)
 scale = Vector2(1.96341, 1.96341)
 texture = ExtResource("7_g7aaj")
+
+[node name="UntitledDesign(4)" type="Sprite2D" parent="UntitledDesign(3)/UntitledDesign(3)"]
+position = Vector2(21362.5, -2231.09)
+scale = Vector2(48.298, 7.40732)
+texture = ExtResource("7_oxgnc")
+
 [node name="Change_scene" type="Area2D" parent="."]
 z_index = 5
 position = Vector2(3368, 512)
 script = SubResource("GDScript_swivv")
 scene_to_load = ExtResource("5_h0s1t")
 
+[node name="Sprite2D" type="Sprite2D" parent="Change_scene"]
+position = Vector2(-840, -41)
+scale = Vector2(0.179688, 0.179688)
+texture = ExtResource("5_0lmpb")
+
 [node name="trigger" type="CollisionShape2D" parent="Change_scene"]
 z_index = 5
+position = Vector2(-840, -44)
 shape = SubResource("RectangleShape2D_h0s1t")
+
+[node name="Minecart" type="Sprite2D" parent="."]
+position = Vector2(1139, 330)
+scale = Vector2(0.459184, 0.459184)
+texture = ExtResource("10_153bs")
+
+[node name="Minecart" type="Sprite2D" parent="Minecart"]
+position = Vector2(313.6, 4.35555)
+scale = Vector2(0.978617, 0.978617)
+texture = ExtResource("10_153bs")
 
 [connection signal="body_entered" from="Change_scene" to="Change_scene" method="_on_body_entered"]

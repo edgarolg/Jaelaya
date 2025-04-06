@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cplp12mg5eddy"
-path="res://.godot/imported/antorcha.png-83ece2625139864c9a35bf185cd659c6.ctex"
+uid="uid://db8aevd4ulm32"
+path="res://.godot/imported/Untitled design (4).png-fdca6b0a5d304934a9455b7ccc6c5a9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/antorcha.png"
-dest_files=["res://.godot/imported/antorcha.png-83ece2625139864c9a35bf185cd659c6.ctex"]
+source_file="res://assets/environment/Untitled design (4).png"
+dest_files=["res://.godot/imported/Untitled design (4).png-fdca6b0a5d304934a9455b7ccc6c5a9d.ctex"]
 
 [params]
 

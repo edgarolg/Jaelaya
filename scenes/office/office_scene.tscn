@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://b3rk8ypwi8mbw"]
 
-[ext_resource type="Texture2D" uid="uid://c6mfletuvh1x5" path="res://assets/environment/office.PNG" id="2_cjw1c"]
+[ext_resource type="Texture2D" uid="uid://c6mfletuvh1x5" path="res://assets/environment/cave/office.PNG" id="2_cjw1c"]
 [ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="2_s8i4k"]
 [ext_resource type="PackedScene" uid="uid://gq08qd4ymrvo" path="res://scenes/DrivingAnimation.tscn" id="3_cjw1c"]
 [ext_resource type="PackedScene" uid="uid://b24of23nlkcu2" path="res://characters/compañero/compañero.tscn" id="4_ax8s2"]

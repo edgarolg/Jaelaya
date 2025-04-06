@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6mfletuvh1x5"
-path="res://.godot/imported/office.PNG-ab9570c2f51b5707dd2483d516b4aa3d.ctex"
+uid="uid://te1cl8tkikpc"
+path="res://.godot/imported/minecart.png-24398122e9e3904daf0b4077ecaa3982.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/office.PNG"
-dest_files=["res://.godot/imported/office.PNG-ab9570c2f51b5707dd2483d516b4aa3d.ctex"]
+source_file="res://assets/environment/cave/minecart.png"
+dest_files=["res://.godot/imported/minecart.png-24398122e9e3904daf0b4077ecaa3982.ctex"]
 
 [params]
 
