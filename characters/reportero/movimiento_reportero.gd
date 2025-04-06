@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 @export var speed: float = 300.0
-@export var heartBar: Node2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 var last_direction: String = "idle"
 var is_attacking: bool = false
@@ -29,6 +29,13 @@ func _physics_process(_delta):
 
 	# Animación de movimiento y guardar última dirección
 	if input_vector != Vector2.ZERO:
+		
+		if Input.is_action_just_pressed("interact"):
+			var actionable = actionable_finder.get_overlapping_areas()
+			if actionable.size() > 0:
+				DialogueManager.show_example_dialogue_balloon(load("res://scenes/office/talk.dialogue"), "start")
+				return
+		
 		if abs(input_vector.x) > abs(input_vector.y):
 			if input_vector.x > 0:
 				animated_sprite.play("right")
