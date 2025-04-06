@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dqsoqonyf10f1"
+path="res://.godot/imported/talk.dialogue-6466746c0646a6ffa560f333e77b6bee.tres"
+
+[deps]
+
+source_file="res://scenes/office/talk.dialogue"
+dest_files=["res://.godot/imported/talk.dialogue-6466746c0646a6ffa560f333e77b6bee.tres"]
+
+[params]
+
+defaults=true

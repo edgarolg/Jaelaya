@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://fh03qcw7u2dp"]
+[gd_scene load_steps=86 format=3 uid="uid://fh03qcw7u2dp"]
 
 [ext_resource type="Script" uid="uid://0uevsm804t0e" path="res://characters/reportero/movimiento_reportero.gd" id="1_rcl3f"]
 [ext_resource type="Texture2D" uid="uid://blrlppjqasqr3" path="res://assets/characters/reportero/attack_Down.png" id="2_pkr8x"]
@@ -579,14 +579,27 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbdhd"]
 size = Vector2(53.8889, 211.094)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vetqo"]
+radius = 97.0464
+
 [node name="Reportero" type="CharacterBody2D"]
 script = ExtResource("1_rcl3f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_uodr7")
-animation = &"attack_L"
+animation = &"down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_tbdhd")
+
+[node name="Direction" type="Marker2D" parent="."]
+
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
+z_index = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+z_index = 5
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_vetqo")
