@@ -170,4 +170,7 @@ position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_tbdhd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_bottom = 0
+editor_draw_limits = true

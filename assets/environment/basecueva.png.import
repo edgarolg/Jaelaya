@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h78b0kxr1kmc"
-path="res://.godot/imported/cave_decor_bgt2.png-83686a071046ff95aed38ebf57278e78.ctex"
+uid="uid://ywmp1f6ap2js"
+path="res://.godot/imported/basecueva.png-5993f08fa300847d2c67f8e34e4bdaf3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/cave/cave_decor_bgt2.png"
-dest_files=["res://.godot/imported/cave_decor_bgt2.png-83686a071046ff95aed38ebf57278e78.ctex"]
+source_file="res://assets/environment/basecueva.png"
+dest_files=["res://.godot/imported/basecueva.png-5993f08fa300847d2c67f8e34e4bdaf3.ctex"]
 
 [params]
 
