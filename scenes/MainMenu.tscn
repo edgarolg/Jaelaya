@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://mk8jveixb4f5"]
+
+[ext_resource type="Script" uid="uid://cdlx4ttn46tdw" path="res://scenes/main_menu.gd" id="1_ow34m"]
+[ext_resource type="Texture2D" uid="uid://bbb1n3uem5lun" path="res://assets/mainMenu/mainMenu.PNG" id="1_yqorp"]
+[ext_resource type="Texture2D" uid="uid://b1hjsdgjkpw6p" path="res://assets/mainMenu/jaelaya.png" id="2_0ykhv"]
+[ext_resource type="Texture2D" uid="uid://37wvple0pi0" path="res://assets/mainMenu/startButton.png" id="4_l72w3"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1065.0
+offset_bottom = 599.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ow34m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -28.0
+offset_top = -99.0
+offset_right = 1201.0
+offset_bottom = 762.0
+texture = ExtResource("1_yqorp")
+
+[node name="Jaelaya" type="Sprite2D" parent="."]
+position = Vector2(622, 148.5)
+scale = Vector2(1.28235, 1.72321)
+texture = ExtResource("2_0ykhv")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 509.0
+offset_right = 717.0
+offset_bottom = 572.0
+icon = ExtResource("4_l72w3")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
