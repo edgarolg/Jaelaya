@@ -28,4 +28,7 @@ tile_set = SubResource("TileSet_hyysg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="EnteringCaveTileMap"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnteringCaveTileMap/StaticBody2D"]
+polygon = PackedVector2Array(-663, 11, 181, 28, 231, -24, 434, -5, 390, 192, 477, 232, 611, 348, -671, 351, -663, 5, -710, -10, -713, 382, 640, 372, 627, -150, -628, -138)
+
 [node name="Camera2D" type="Camera2D" parent="."]
