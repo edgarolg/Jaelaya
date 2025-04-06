@@ -211,6 +211,11 @@ region = Rect2(0, 0, 138, 262)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uodr7"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"atacked_D",
+"speed": 2.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6j7bi")
@@ -416,7 +421,8 @@ script = ExtResource("1_rcl3f")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_uodr7")
-animation = &"attack_R"
+animation = &"atacked_D"
+frame_progress = 0.6348
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
