@@ -86,3 +86,4 @@ libraries = {
 &"": SubResource("AnimationLibrary_vu7tn")
 }
 autoplay = "BookZoom"
+speed_scale = 0.9
