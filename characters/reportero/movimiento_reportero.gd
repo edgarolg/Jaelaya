@@ -1,10 +1,15 @@
 extends CharacterBody2D
 
 @export var speed: float = 300.0
+@export var heartBar: Node2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var last_direction: String = "idle"
 var is_attacking: bool = false
+var max_health := 5
+var health := max_health
+signal health_changed(new_health: int)
+
 
 func _physics_process(_delta):
 	var input_vector = Vector2.ZERO
@@ -55,3 +60,13 @@ func _physics_process(_delta):
 				animated_sprite.play("attack_D")
 		await animated_sprite.animation_finished
 		is_attacking = false
+
+func take_damage(amount: int):
+	health = max(0, health - amount)
+	emit_signal("health_changed", health)	
+	
+	if health <= 0:
+		die()
+
+func die():
+	print("Game Over")
