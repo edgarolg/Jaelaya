@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dno4nvq6wa43w"
-path="res://.godot/imported/atacked_d.png-b08988e72abb6292c129a16c56d52d7e.ctex"
+uid="uid://cccar2ve6c6k8"
+path="res://.godot/imported/caidaFondo.PNG-95fb353cb053351f9813c98e0b2917c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/atacked_d.png"
-dest_files=["res://.godot/imported/atacked_d.png-b08988e72abb6292c129a16c56d52d7e.ctex"]
+source_file="res://assets/cinematic/caidaFondo.PNG"
+dest_files=["res://.godot/imported/caidaFondo.PNG-95fb353cb053351f9813c98e0b2917c5.ctex"]
 
 [params]
 

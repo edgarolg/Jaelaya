@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=3 uid="uid://cw6ltwuxilbdw"]
+
+[ext_resource type="Texture2D" uid="uid://cccar2ve6c6k8" path="res://assets/cinematic/caidaFondo.PNG" id="1_270ho"]
+[ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="2_am6jr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ouukt"]
+texture = ExtResource("1_270ho")
+0:0/size_in_atlas = Vector2i(80, 60)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lwt38"]
+sources/0 = SubResource("TileSetAtlasSource_ouukt")
+
+[sub_resource type="Animation" id="Animation_0m2er"]
+resource_name = "fall"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_filter")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, -60), Vector2(576, 1000)]
+}
+
+[sub_resource type="Animation" id="Animation_r7uf4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_filter")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, -60)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8er2"]
+_data = {
+&"RESET": SubResource("Animation_r7uf4"),
+&"fall": SubResource("Animation_0m2er")
+}
+
+[node name="FallScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(570, 322)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(0.9, 0.9)
+tile_map_data = PackedByteArray(0, 0, 39, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_lwt38")
+
+[node name="Reportero" parent="." instance=ExtResource("2_am6jr")]
+z_index = 5
+position = Vector2(576, -60)
+scale = Vector2(1.475, 1.475)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Reportero"]
+libraries = {
+&"": SubResource("AnimationLibrary_a8er2")
+}
+autoplay = "fall"

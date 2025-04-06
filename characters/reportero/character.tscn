@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://fh03qcw7u2dp"]
+[gd_scene load_steps=88 format=3 uid="uid://fh03qcw7u2dp"]
 
 [ext_resource type="Script" uid="uid://0uevsm804t0e" path="res://characters/reportero/movimiento_reportero.gd" id="1_rcl3f"]
 [ext_resource type="Texture2D" uid="uid://blrlppjqasqr3" path="res://assets/characters/reportero/attack_Down.png" id="2_pkr8x"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://clobnsxe8umjx" path="res://assets/characters/reportero/attackedLeft.png" id="6_ifv73"]
 [ext_resource type="Texture2D" uid="uid://dd7o3jtgpj363" path="res://assets/characters/reportero/attackedRight.png" id="6_vetqo"]
 [ext_resource type="Texture2D" uid="uid://bm0aputrje8po" path="res://assets/characters/reportero/attackedBack.png" id="7_vetqo"]
+[ext_resource type="Texture2D" uid="uid://b2x8co2y815be" path="res://assets/characters/reportero/caida.png" id="11_6ycnk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6j7bi"]
 atlas = ExtResource("2_pkr8x")
@@ -232,6 +233,10 @@ region = Rect2(117, 0, 117, 277)
 [sub_resource type="AtlasTexture" id="AtlasTexture_j52mm"]
 atlas = ExtResource("2_suyfy")
 region = Rect2(0, 0, 117, 277)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyleo"]
+atlas = ExtResource("11_6ycnk")
+region = Rect2(180, 256, 214, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnt6u"]
 atlas = ExtResource("3_a51no")
@@ -512,6 +517,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_xyleo")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_mnt6u")
 }, {
 "duration": 1.0,
@@ -588,7 +601,8 @@ script = ExtResource("1_rcl3f")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_uodr7")
-animation = &"down"
+animation = &"fall"
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
