@@ -75,6 +75,6 @@ position = Vector2(60, -516.656)
 shape = SubResource("RectangleShape2D_8h7ek")
 
 [node name="Compañero" parent="." instance=ExtResource("4_ax8s2")]
-position = Vector2(141, 23)
+position = Vector2(84, 58)
 
 [connection signal="body_entered" from="Change_scene" to="Change_scene" method="_on_body_entered"]
