@@ -1,12 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://b3rk8ypwi8mbw"]
+[gd_scene load_steps=13 format=3 uid="uid://b3rk8ypwi8mbw"]
 
 [ext_resource type="Texture2D" uid="uid://c6mfletuvh1x5" path="res://assets/environment/office.PNG" id="2_cjw1c"]
 [ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="2_s8i4k"]
 [ext_resource type="PackedScene" uid="uid://gq08qd4ymrvo" path="res://scenes/DrivingAnimation.tscn" id="3_cjw1c"]
 [ext_resource type="PackedScene" uid="uid://b24of23nlkcu2" path="res://characters/compañero/compañero.tscn" id="4_ax8s2"]
-[ext_resource type="Script" path="res://scenes/office/actionable.gd" id="5_8h7ek"]
 [ext_resource type="AudioStream" uid="uid://dwtu2frh75if2" path="res://assets/musica/musica_oficina.mp3" id="6_jwppt"]
-[ext_resource type="Resource" uid="uid://dqsoqonyf10f1" path="res://scenes/office/talk.dialogue" id="6_y6yeo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ax8s2"]
 texture = ExtResource("2_cjw1c")
@@ -87,8 +85,6 @@ position = Vector2(84, 58)
 [node name="actionable" type="Area2D" parent="Compañero"]
 z_index = 5
 position = Vector2(1, 21)
-script = ExtResource("5_8h7ek")
-dialogue_resource = ExtResource("6_y6yeo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Compañero/actionable"]
 z_index = 5
