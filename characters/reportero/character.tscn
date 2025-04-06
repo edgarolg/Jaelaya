@@ -1,16 +1,16 @@
 [gd_scene load_steps=85 format=3 uid="uid://fh03qcw7u2dp"]
 
 [ext_resource type="Script" uid="uid://0uevsm804t0e" path="res://characters/reportero/movimiento_reportero.gd" id="1_rcl3f"]
-[ext_resource type="Texture2D" uid="uid://blrlppjqasqr3" path="res://assets/characters/attack_Down.png" id="2_pkr8x"]
-[ext_resource type="Texture2D" uid="uid://cfsc5byi0ep58" path="res://assets/characters/reportero.png" id="2_suyfy"]
-[ext_resource type="Texture2D" uid="uid://ddq0od7065uk" path="res://assets/characters/idle.png" id="3_a51no"]
-[ext_resource type="Texture2D" uid="uid://ryoq7rprux6o" path="res://assets/characters/reportero_up.png" id="3_suyfy"]
-[ext_resource type="Texture2D" uid="uid://biwcti5oika7y" path="res://assets/characters/attack_Up.png" id="4_i71js"]
-[ext_resource type="Texture2D" uid="uid://cgsdcirund77x" path="res://assets/characters/attack_R.png" id="4_rgdne"]
-[ext_resource type="Texture2D" uid="uid://fydlrnfcuoju" path="res://assets/characters/attackedFront.png" id="6_gl7q0"]
-[ext_resource type="Texture2D" uid="uid://clobnsxe8umjx" path="res://assets/characters/attackedLeft.png" id="6_ifv73"]
-[ext_resource type="Texture2D" uid="uid://dd7o3jtgpj363" path="res://assets/characters/attackedRight.png" id="6_vetqo"]
-[ext_resource type="Texture2D" uid="uid://bm0aputrje8po" path="res://assets/characters/attackedBack.png" id="7_vetqo"]
+[ext_resource type="Texture2D" uid="uid://blrlppjqasqr3" path="res://assets/characters/reportero/attack_Down.png" id="2_pkr8x"]
+[ext_resource type="Texture2D" uid="uid://cfsc5byi0ep58" path="res://assets/characters/reportero/reportero.png" id="2_suyfy"]
+[ext_resource type="Texture2D" uid="uid://ddq0od7065uk" path="res://assets/characters/reportero/idle.png" id="3_a51no"]
+[ext_resource type="Texture2D" uid="uid://ryoq7rprux6o" path="res://assets/characters/reportero/reportero_up.png" id="3_suyfy"]
+[ext_resource type="Texture2D" uid="uid://biwcti5oika7y" path="res://assets/characters/reportero/attack_Up.png" id="4_i71js"]
+[ext_resource type="Texture2D" uid="uid://cgsdcirund77x" path="res://assets/characters/reportero/attack_R.png" id="4_rgdne"]
+[ext_resource type="Texture2D" uid="uid://fydlrnfcuoju" path="res://assets/characters/reportero/attackedFront.png" id="6_gl7q0"]
+[ext_resource type="Texture2D" uid="uid://clobnsxe8umjx" path="res://assets/characters/reportero/attackedLeft.png" id="6_ifv73"]
+[ext_resource type="Texture2D" uid="uid://dd7o3jtgpj363" path="res://assets/characters/reportero/attackedRight.png" id="6_vetqo"]
+[ext_resource type="Texture2D" uid="uid://bm0aputrje8po" path="res://assets/characters/reportero/attackedBack.png" id="7_vetqo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6j7bi"]
 atlas = ExtResource("2_pkr8x")
@@ -535,11 +535,6 @@ animations = [{
 "name": &"left",
 "speed": 5.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q56mv")
@@ -587,8 +582,7 @@ script = ExtResource("1_rcl3f")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_uodr7")
-animation = &"idle"
-frame_progress = 0.333782
+animation = &"attack_D"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)

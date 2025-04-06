@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfsc5byi0ep58"
-path="res://.godot/imported/reportero.png-fc1f913c082efabac5b479ea680a3c08.ctex"
+uid="uid://bm0aputrje8po"
+path="res://.godot/imported/attackedBack.png-157ec39d7b5a67bed7e4f3cdb914634e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/reportero.png"
-dest_files=["res://.godot/imported/reportero.png-fc1f913c082efabac5b479ea680a3c08.ctex"]
+source_file="res://assets/characters/reportero/attackedBack.png"
+dest_files=["res://.godot/imported/attackedBack.png-157ec39d7b5a67bed7e4f3cdb914634e.ctex"]
 
 [params]
 

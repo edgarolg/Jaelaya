@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd7o3jtgpj363"
-path="res://.godot/imported/attackedRight.png-43d82c077a1302b427516b7aac30091e.ctex"
+uid="uid://ryoq7rprux6o"
+path="res://.godot/imported/reportero_up.png-ae819754642e59125544ec113b334a48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/attackedRight.png"
-dest_files=["res://.godot/imported/attackedRight.png-43d82c077a1302b427516b7aac30091e.ctex"]
+source_file="res://assets/characters/reportero/reportero_up.png"
+dest_files=["res://.godot/imported/reportero_up.png-ae819754642e59125544ec113b334a48.ctex"]
 
 [params]
 
