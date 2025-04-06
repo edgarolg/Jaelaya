@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buvoiv3bxd3q4"
-path="res://.godot/imported/oficina.PNG-efd4a8d3ddf36a40926641c5ac0bf0ae.ctex"
+uid="uid://cgsdcirund77x"
+path="res://.godot/imported/attack_R.png-3aea4ad068659fddc3b6bf749fd94c57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/oficina.PNG"
-dest_files=["res://.godot/imported/oficina.PNG-efd4a8d3ddf36a40926641c5ac0bf0ae.ctex"]
+source_file="res://assets/characters/attack_R.png"
+dest_files=["res://.godot/imported/attack_R.png-3aea4ad068659fddc3b6bf749fd94c57.ctex"]
 
 [params]
 

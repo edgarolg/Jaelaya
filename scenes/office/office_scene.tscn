@@ -1,27 +1,16 @@
 [gd_scene load_steps=10 format=3 uid="uid://b3rk8ypwi8mbw"]
 
-[ext_resource type="Texture2D" uid="uid://buvoiv3bxd3q4" path="res://assets/environment/oficina.PNG" id="2_cjw1c"]
+[ext_resource type="Texture2D" uid="uid://c6mfletuvh1x5" path="res://assets/environment/office.PNG" id="2_cjw1c"]
 [ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="2_s8i4k"]
 [ext_resource type="PackedScene" uid="uid://gq08qd4ymrvo" path="res://scenes/DrivingAnimation.tscn" id="3_cjw1c"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8i4k"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ax8s2"]
 texture = ExtResource("2_cjw1c")
-texture_region_size = Vector2i(98, 96)
-13:9/0 = 0
-13:1/0 = 0
-13:0/0 = 0
-13:2/0 = 0
-13:3/0 = 0
-13:4/0 = 0
-13:5/0 = 0
-13:6/0 = 0
-13:7/0 = 0
-13:8/0 = 0
-0:0/size_in_atlas = Vector2i(13, 10)
+0:0/size_in_atlas = Vector2i(80, 60)
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cjw1c"]
-sources/3 = SubResource("TileSetAtlasSource_s8i4k")
+sources/0 = SubResource("TileSetAtlasSource_ax8s2")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8i4k"]
 size = Vector2(196, 439)
@@ -41,7 +30,7 @@ func _on_body_entered(body):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8h7ek"]
-size = Vector2(66, 94)
+size = Vector2(66, 83.3125)
 
 [node name="OfficeScene" type="Node2D"]
 
@@ -54,7 +43,7 @@ scale = Vector2(0.8, 0.8)
 
 [node name="Office" type="TileMapLayer" parent="OfficeTileMap"]
 position = Vector2(-23, 0)
-tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
+tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_cjw1c")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="OfficeTileMap"]
@@ -81,7 +70,7 @@ script = SubResource("GDScript_ax8s2")
 scene_to_load = ExtResource("3_cjw1c")
 
 [node name="trigger" type="CollisionShape2D" parent="Change_scene"]
-position = Vector2(23, -37)
+position = Vector2(60, -516.656)
 shape = SubResource("RectangleShape2D_8h7ek")
 
 [connection signal="body_entered" from="Change_scene" to="Change_scene" method="_on_body_entered"]
