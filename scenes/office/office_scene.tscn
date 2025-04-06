@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3rk8ypwi8mbw"]
+[gd_scene load_steps=12 format=3 uid="uid://b3rk8ypwi8mbw"]
 
 [ext_resource type="Texture2D" uid="uid://c6mfletuvh1x5" path="res://assets/environment/office.PNG" id="2_cjw1c"]
 [ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="2_s8i4k"]
 [ext_resource type="PackedScene" uid="uid://gq08qd4ymrvo" path="res://scenes/DrivingAnimation.tscn" id="3_cjw1c"]
 [ext_resource type="PackedScene" uid="uid://b24of23nlkcu2" path="res://characters/compañero/compañero.tscn" id="4_ax8s2"]
+[ext_resource type="AudioStream" uid="uid://dwtu2frh75if2" path="res://assets/musica/musica_oficina.mp3" id="5_8h7ek"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ax8s2"]
 texture = ExtResource("2_cjw1c")
@@ -76,5 +77,11 @@ shape = SubResource("RectangleShape2D_8h7ek")
 
 [node name="Compañero" parent="." instance=ExtResource("4_ax8s2")]
 position = Vector2(84, 58)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1, 0)
+stream = ExtResource("5_8h7ek")
+volume_db = 6.0
+autoplay = true
 
 [connection signal="body_entered" from="Change_scene" to="Change_scene" method="_on_body_entered"]

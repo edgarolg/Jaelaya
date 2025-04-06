@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://blrlppjqasqr3" path="res://assets/characters/reportero/attack_Down.png" id="2_pkr8x"]
 [ext_resource type="Texture2D" uid="uid://cfsc5byi0ep58" path="res://assets/characters/reportero/reportero.png" id="2_suyfy"]
 [ext_resource type="Texture2D" uid="uid://ddq0od7065uk" path="res://assets/characters/reportero/idle.png" id="3_a51no"]
+[ext_resource type="Texture2D" uid="uid://272y5oeiuehv" path="res://assets/characters/reportero/attack_Left.png" id="3_ifv73"]
 [ext_resource type="Texture2D" uid="uid://ryoq7rprux6o" path="res://assets/characters/reportero/reportero_up.png" id="3_suyfy"]
 [ext_resource type="Texture2D" uid="uid://biwcti5oika7y" path="res://assets/characters/reportero/attack_Up.png" id="4_i71js"]
 [ext_resource type="Texture2D" uid="uid://cgsdcirund77x" path="res://assets/characters/reportero/attack_R.png" id="4_rgdne"]
@@ -44,40 +45,37 @@ region = Rect2(272, 256, 136, 256)
 atlas = ExtResource("2_pkr8x")
 region = Rect2(408, 256, 136, 256)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ifv73"]
-load_path = "res://.godot/imported/attack_Left.png-8ea862efae5b7b81f38fabe11a537e9a.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vetqo"]
-atlas = SubResource("CompressedTexture2D_ifv73")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ycnk"]
+atlas = ExtResource("3_ifv73")
 region = Rect2(0, 262, 139, 262)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ifv73"]
-atlas = SubResource("CompressedTexture2D_ifv73")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dccwi"]
+atlas = ExtResource("3_ifv73")
 region = Rect2(417, 0, 139, 262)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ycnk"]
-atlas = SubResource("CompressedTexture2D_ifv73")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8if0m"]
+atlas = ExtResource("3_ifv73")
 region = Rect2(278, 0, 139, 262)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dccwi"]
-atlas = SubResource("CompressedTexture2D_ifv73")
+[sub_resource type="AtlasTexture" id="AtlasTexture_21xc5"]
+atlas = ExtResource("3_ifv73")
 region = Rect2(139, 0, 139, 262)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8if0m"]
-atlas = SubResource("CompressedTexture2D_ifv73")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyf62"]
+atlas = ExtResource("3_ifv73")
 region = Rect2(0, 0, 139, 262)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_21xc5"]
-atlas = SubResource("CompressedTexture2D_ifv73")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2d87y"]
+atlas = ExtResource("3_ifv73")
 region = Rect2(278, 524, 139, 262)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gyf62"]
-atlas = SubResource("CompressedTexture2D_ifv73")
-region = Rect2(40, 524, 200, 262)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xkul"]
+atlas = ExtResource("3_ifv73")
+region = Rect2(36, 522, 220, 261)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2d87y"]
-atlas = SubResource("CompressedTexture2D_ifv73")
-region = Rect2(186, 262, 340, 262)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j2ey"]
+atlas = ExtResource("3_ifv73")
+region = Rect2(182, 261, 356, 261)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_frslu"]
 atlas = ExtResource("4_rgdne")
@@ -333,12 +331,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vetqo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ifv73")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_6ycnk")
 }, {
 "duration": 1.0,
@@ -355,6 +347,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2d87y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xkul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j2ey")
 }],
 "loop": false,
 "name": &"attack_L",
@@ -587,7 +585,7 @@ script = ExtResource("1_rcl3f")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_uodr7")
-animation = &"attack_D"
+animation = &"attack_L"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
