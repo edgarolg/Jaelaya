@@ -23,7 +23,6 @@ size = Vector2(65, 53)
 z_index = 5
 position = Vector2(-608, 195)
 scale = Vector2(0.708351, 0.702636)
-speed = null
 
 [node name="EnteringCaveTileMap" type="Node2D" parent="."]
 

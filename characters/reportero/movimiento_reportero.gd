@@ -10,32 +10,31 @@ var max_health := 5
 var health := max_health
 signal health_changed(new_health: int)
 
+var has_shown_dialogue := false
 
 func _physics_process(_delta):
 	var input_vector = Vector2.ZERO
 
-	# Si está atacando, no mover ni cambiar animación
 	if is_attacking:
 		return
 	
-	# Leer el input
 	input_vector.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	input_vector.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	input_vector = input_vector.normalized()
 	
-	# Movimiento
 	velocity = input_vector * speed
 	move_and_slide()
 
-	# Animación de movimiento y guardar última dirección
+	var actionable = actionable_finder.get_overlapping_areas()
+
+	if actionable.size() > 0 and not has_shown_dialogue and is_in_office_scene():
+		has_shown_dialogue = true
+		DialogueManager.show_example_dialogue_balloon(load("res://scenes/office/talk.dialogue"), "start")
+
+	if actionable.size() == 0:
+		has_shown_dialogue = false
+
 	if input_vector != Vector2.ZERO:
-		
-		if Input.is_action_just_pressed("interact"):
-			var actionable = actionable_finder.get_overlapping_areas()
-			if actionable.size() > 0:
-				DialogueManager.show_example_dialogue_balloon(load("res://scenes/office/talk.dialogue"), "start")
-				return
-		
 		if abs(input_vector.x) > abs(input_vector.y):
 			if input_vector.x > 0:
 				animated_sprite.play("right")
@@ -53,7 +52,6 @@ func _physics_process(_delta):
 	else:
 		animated_sprite.play("idle")
 
-	# Detectar ataque
 	if Input.is_action_just_pressed("attack"):
 		is_attacking = true
 		match last_direction:
@@ -77,3 +75,6 @@ func take_damage(amount: int):
 
 func die():
 	print("Game Over")
+
+func is_in_office_scene() -> bool:
+	return get_tree().current_scene.scene_file_path.contains("scenes/office")

@@ -13719,39 +13719,45 @@ scale = Vector2(1.14595, 1.14595)
 texture = ExtResource("6_g7aaj")
 
 [node name="UntitledDesign(2)" type="Sprite2D" parent="UntitledDesign(2)"]
+z_index = 10
+y_sort_enabled = true
 position = Vector2(3367.41, 1309.26)
 scale = Vector2(1.07049, 1.07049)
 texture = ExtResource("6_g7aaj")
 
 [node name="UntitledDesign(2)2" type="Sprite2D" parent="UntitledDesign(2)"]
-position = Vector2(12317.5, 1256.88)
-scale = Vector2(1.22673, 1.22673)
+z_index = 10
+position = Vector2(10602.4, 1322.98)
+scale = Vector2(1.01111, 1.16063)
 texture = ExtResource("6_g7aaj")
 
 [node name="UntitledDesign(3)" type="Sprite2D" parent="."]
+z_index = 10
 position = Vector2(483, 602)
 scale = Vector2(0.0841585, 0.0841585)
 texture = ExtResource("7_g7aaj")
 
+[node name="UntitledDesign(3)2" type="Sprite2D" parent="UntitledDesign(3)"]
+position = Vector2(25368.8, 323.521)
+scale = Vector2(0.907563, 0.870109)
+texture = ExtResource("7_g7aaj")
+
+[node name="UntitledDesign(3)3" type="Sprite2D" parent="UntitledDesign(3)"]
+z_as_relative = false
+position = Vector2(14413.2, -2412.11)
+scale = Vector2(0.499002, 0.499002)
+texture = ExtResource("7_g7aaj")
+
+[node name="UntitledDesign(4)" type="Sprite2D" parent="UntitledDesign(3)"]
+position = Vector2(18025.4, -4023.8)
+scale = Vector2(34.1178, 5.23254)
+texture = ExtResource("7_oxgnc")
+
 [node name="UntitledDesign(3)" type="Sprite2D" parent="UntitledDesign(3)"]
+z_as_relative = false
 position = Vector2(2934.94, -2447.76)
 scale = Vector2(0.706401, 0.706401)
 texture = ExtResource("7_g7aaj")
-
-[node name="UntitledDesign(3)" type="Sprite2D" parent="UntitledDesign(3)/UntitledDesign(3)"]
-position = Vector2(16249, 50.4631)
-scale = Vector2(0.706401, 0.706401)
-texture = ExtResource("7_g7aaj")
-
-[node name="UntitledDesign(3)" type="Sprite2D" parent="UntitledDesign(3)/UntitledDesign(3)/UntitledDesign(3)"]
-position = Vector2(31051.1, 5262.49)
-scale = Vector2(1.96341, 1.96341)
-texture = ExtResource("7_g7aaj")
-
-[node name="UntitledDesign(4)" type="Sprite2D" parent="UntitledDesign(3)/UntitledDesign(3)"]
-position = Vector2(21362.5, -2231.09)
-scale = Vector2(48.298, 7.40732)
-texture = ExtResource("7_oxgnc")
 
 [node name="Change_scene" type="Area2D" parent="."]
 z_index = 5
