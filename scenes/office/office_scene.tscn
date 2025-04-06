@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3rk8ypwi8mbw"]
+[gd_scene load_steps=10 format=3 uid="uid://b3rk8ypwi8mbw"]
 
 [ext_resource type="Texture2D" uid="uid://buvoiv3bxd3q4" path="res://assets/environment/oficina.PNG" id="2_cjw1c"]
 [ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="2_s8i4k"]
+[ext_resource type="PackedScene" uid="uid://gq08qd4ymrvo" path="res://scenes/DrivingAnimation.tscn" id="3_cjw1c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8i4k"]
 texture = ExtResource("2_cjw1c")
@@ -28,11 +29,25 @@ size = Vector2(196, 439)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjw1c"]
 size = Vector2(201, 445)
 
+[sub_resource type="GDScript" id="GDScript_ax8s2"]
+script/source = "extends Area2D
+
+@export var scene_to_load: PackedScene  # Puedes arrastrar la escena desde el editor aquí
+
+func _on_body_entered(body):
+	if body.name == \"Reportero\":  # Asegúrate de que el nodo jugador se llama \"Player\"
+		if scene_to_load:
+			get_tree().change_scene_to_packed(scene_to_load)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h7ek"]
+size = Vector2(66, 94)
+
 [node name="OfficeScene" type="Node2D"]
 
 [node name="Reportero" parent="." instance=ExtResource("2_s8i4k")]
 z_index = 5
-position = Vector2(17, 34)
+position = Vector2(-591, -60)
 scale = Vector2(0.8, 0.8)
 
 [node name="OfficeTileMap" type="Node2D" parent="."]
@@ -54,7 +69,19 @@ shape = SubResource("RectangleShape2D_cjw1c")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OfficeTileMap/StaticBody2D"]
 position = Vector2(-8, -4)
-polygon = PackedVector2Array(640, -442, 640, 481, -636, 504, -667, 105, -993, 101, -1001, -149, -656, -194, 616, -203, 670, -465, -1054, -552, -1270, 276, -480, 716, 898, 648, 678, -419)
+polygon = PackedVector2Array(640, -442, 640, 481, -636, 504, -633, 106, -993, 101, -633, 92, -656, -194, 616, -203, 670, -465, -1054, -552, -1270, 276, -480, 716, 898, 648, 678, -419)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.9, 0.9)
+
+[node name="Change_scene" type="Area2D" parent="."]
+z_index = 5
+position = Vector2(-4, 277)
+script = SubResource("GDScript_ax8s2")
+scene_to_load = ExtResource("3_cjw1c")
+
+[node name="trigger" type="CollisionShape2D" parent="Change_scene"]
+position = Vector2(23, -37)
+shape = SubResource("RectangleShape2D_8h7ek")
+
+[connection signal="body_entered" from="Change_scene" to="Change_scene" method="_on_body_entered"]
