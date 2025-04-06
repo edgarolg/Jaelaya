@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dt0cv30s34ikb" path="res://assets/environment/cave/background.jpg" id="2_4c3f0"]
 [ext_resource type="Texture2D" uid="uid://drdbpd4govddg" path="res://assets/environment/cave/caveEntrance.png" id="3_0nqxl"]
 [ext_resource type="AudioStream" uid="uid://bn5er2hfxed4v" path="res://assets/musica/musica_cueva.mp3" id="4_2b4jl"]
-[ext_resource type="Script" path="res://scenes/caveRuning/object_spawner.gd" id="5_2b4jl"]
+[ext_resource type="Script" uid="uid://effa0s3wou44" path="res://scenes/caveRuning/object_spawner.gd" id="5_2b4jl"]
 [ext_resource type="PackedScene" uid="uid://co43f1qc5bb2b" path="res://assets/environment/cave/FallingRock.tscn" id="6_0nqxl"]
-[ext_resource type="PackedScene" uid="uid://j64sd6f7wbjb" path="res://scenes/falling/falling.tscn" id="7_2b4jl"]
+[ext_resource type="PackedScene" uid="uid://j64sd6f7wbjb" path="res://scenes/blackScreen/blackScreen.tscn" id="7_2b4jl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aq47u"]
 texture = ExtResource("2_4c3f0")
@@ -13707,7 +13707,6 @@ tile_set = SubResource("TileSet_8jyut")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_2b4jl")
-volume_db = 6.0
 autoplay = true
 
 [node name="ObjectSpawner" type="Node2D" parent="." node_paths=PackedStringArray("jugador")]

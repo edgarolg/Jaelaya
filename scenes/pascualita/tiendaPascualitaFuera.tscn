@@ -1,17 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://cw6ltwuxilbdw"]
+[gd_scene load_steps=8 format=3 uid="uid://l7cd2u3b1sgp"]
 
-[ext_resource type="Texture2D" uid="uid://cccar2ve6c6k8" path="res://assets/cinematic/caidaFondo.PNG" id="1_270ho"]
-[ext_resource type="Script" uid="uid://clojdep4nyd24" path="res://scenes/fallScene/fall_scene.gd" id="1_am6jr"]
-[ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="2_am6jr"]
-[ext_resource type="PackedScene" uid="uid://l7cd2u3b1sgp" path="res://scenes/pascualita/tiendaPascualitaFuera.tscn" id="2_ouukt"]
+[ext_resource type="Texture2D" uid="uid://brnp02j5fna3q" path="res://assets/environment/laPopular.png" id="1_wovrs"]
+[ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="2_ua4hn"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ouukt"]
-texture = ExtResource("1_270ho")
-0:0/size_in_atlas = Vector2i(80, 60)
-0:0/0 = 0
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ua4hn"]
+texture = ExtResource("1_wovrs")
+0:1/size_in_atlas = Vector2i(135, 100)
+0:1/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_lwt38"]
-sources/0 = SubResource("TileSetAtlasSource_ouukt")
+[sub_resource type="TileSet" id="TileSet_3b8ka"]
+sources/0 = SubResource("TileSetAtlasSource_ua4hn")
 
 [sub_resource type="Animation" id="Animation_r7uf4"]
 length = 0.001
@@ -74,19 +72,19 @@ _data = {
 &"fall": SubResource("Animation_0m2er")
 }
 
-[node name="FallScene" type="Node2D"]
-script = ExtResource("1_am6jr")
-scene_to_change = ExtResource("2_ouukt")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(570, 322)
+[node name="TiendaPascualitaFuera" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-scale = Vector2(0.9, 0.9)
-tile_map_data = PackedByteArray(0, 0, 39, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-tile_set = SubResource("TileSet_lwt38")
+scale = Vector2(1.2, 1.2)
+tile_map_data = PackedByteArray(0, 0, 36, 0, 21, 0, 0, 0, 0, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_3b8ka")
 
-[node name="Reportero" parent="." instance=ExtResource("2_am6jr")]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(699, 410)
+scale = Vector2(3.22642, -13.2684)
+zoom = Vector2(0.45, 0.35)
+
+[node name="Reportero" parent="." instance=ExtResource("2_ua4hn")]
 z_index = 5
 position = Vector2(576, -60)
 scale = Vector2(1.475, 1.475)
