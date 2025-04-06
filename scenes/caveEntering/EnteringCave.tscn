@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0mxynmikx506"]
+
+[ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="1_q6hqt"]
+[ext_resource type="Texture2D" uid="uid://drdbpd4govddg" path="res://assets/environment/cave/caveEntrance.png" id="2_0q8ja"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phygd"]
+texture = ExtResource("2_0q8ja")
+1:2/size_in_atlas = Vector2i(134, 99)
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hyysg"]
+sources/0 = SubResource("TileSetAtlasSource_phygd")
+
+[node name="EnteringCave" type="Node2D"]
+
+[node name="Reportero" parent="." instance=ExtResource("1_q6hqt")]
+z_index = 5
+position = Vector2(-618, 199)
+scale = Vector2(0.708351, 0.702636)
+
+[node name="EnteringCaveTileMap" type="Node2D" parent="."]
+
+[node name="caveEntrance" type="TileMapLayer" parent="EnteringCaveTileMap"]
+position = Vector2(-343, -308)
+scale = Vector2(0.590371, 0.565833)
+tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 33, 0, 22, 0, 0, 0, 1, 0, 2, 0, 0, 0)
+tile_set = SubResource("TileSet_hyysg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="EnteringCaveTileMap"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
