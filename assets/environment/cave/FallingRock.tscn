@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://co43f1qc5bb2b"]
+
+[ext_resource type="Script" uid="uid://dmlrn42x7vt1r" path="res://assets/environment/cave/falling_rock.gd" id="1_q0w0l"]
+[ext_resource type="Texture2D" uid="uid://dw3qv6gdas118" path="res://assets/environment/cave/rock.png" id="2_q0w0l"]
+
+[sub_resource type="GDScript" id="GDScript_4dcng"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sm2lc"]
+size = Vector2(111, 85)
+
+[node name="FallingRock" type="Node2D"]
+script = ExtResource("1_q0w0l")
+
+[node name="RandomRock" type="Area2D" parent="."]
+z_index = 5
+script = SubResource("GDScript_4dcng")
+
+[node name="rock" type="Sprite2D" parent="RandomRock"]
+texture = ExtResource("2_q0w0l")
+
+[node name="collisionRock" type="CollisionShape2D" parent="RandomRock"]
+position = Vector2(-5.5, -1.5)
+shape = SubResource("RectangleShape2D_sm2lc")

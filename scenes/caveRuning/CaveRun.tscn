@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=4 uid="uid://dlgfwusv8kw4v"]
+[gd_scene load_steps=14 format=4 uid="uid://dlgfwusv8kw4v"]
 
 [ext_resource type="PackedScene" uid="uid://fh03qcw7u2dp" path="res://characters/reportero/character.tscn" id="1_sbhjd"]
 [ext_resource type="Texture2D" uid="uid://dt0cv30s34ikb" path="res://assets/environment/cave/background.jpg" id="2_4c3f0"]
 [ext_resource type="Texture2D" uid="uid://drdbpd4govddg" path="res://assets/environment/cave/caveEntrance.png" id="3_0nqxl"]
 [ext_resource type="AudioStream" uid="uid://5xla7kk65kyl" path="res://assets/musica/musica_cueva.mp3" id="4_2b4jl"]
+[ext_resource type="Script" uid="uid://effa0s3wou44" path="res://scenes/caveRuning/object_spawner.gd" id="5_2b4jl"]
+[ext_resource type="PackedScene" uid="uid://co43f1qc5bb2b" path="res://assets/environment/cave/FallingRock.tscn" id="6_0nqxl"]
+[ext_resource type="PackedScene" uid="uid://j64sd6f7wbjb" path="res://scenes/falling/falling.tscn" id="7_2b4jl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aq47u"]
 texture = ExtResource("2_4c3f0")
@@ -13654,6 +13657,20 @@ texture = ExtResource("3_0nqxl")
 [sub_resource type="TileSet" id="TileSet_8jyut"]
 sources/0 = SubResource("TileSetAtlasSource_evp26")
 
+[sub_resource type="GDScript" id="GDScript_aq47u"]
+script/source = "extends Area2D
+
+@export var scene_to_load: PackedScene  # Puedes arrastrar la escena desde el editor aquí
+
+func _on_body_entered(body):
+	if body.name == \"Reportero\":  # Asegúrate de que el nodo jugador se llama \"Player\"
+		if scene_to_load:
+			get_tree().change_scene_to_packed(scene_to_load)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_us5xa"]
+size = Vector2(119, 291)
+
 [node name="CaveRun" type="Node2D"]
 
 [node name="Reportero" parent="." instance=ExtResource("1_sbhjd")]
@@ -13686,3 +13703,32 @@ tile_set = SubResource("TileSet_8jyut")
 stream = ExtResource("4_2b4jl")
 volume_db = 6.0
 autoplay = true
+
+[node name="ObjectSpawner" type="Node2D" parent="." node_paths=PackedStringArray("jugador")]
+z_index = 5
+script = ExtResource("5_2b4jl")
+object_scene = ExtResource("6_0nqxl")
+spawn_height = -200.0
+spawn_interval = 0.2
+jugador = NodePath("../Reportero")
+
+[node name="ObjectSpawner2" type="Node2D" parent="." node_paths=PackedStringArray("jugador")]
+z_index = 5
+script = ExtResource("5_2b4jl")
+object_scene = ExtResource("6_0nqxl")
+spawn_range_x = Vector2(-1500, 1500)
+fall_speed = 100.0
+spawn_interval = 0.6
+jugador = NodePath("../Reportero")
+
+[node name="Change_scene" type="Area2D" parent="."]
+z_index = 5
+position = Vector2(3088, 461)
+script = SubResource("GDScript_aq47u")
+scene_to_load = ExtResource("7_2b4jl")
+
+[node name="trigger" type="CollisionShape2D" parent="Change_scene"]
+position = Vector2(-26.5, 47.5)
+shape = SubResource("RectangleShape2D_us5xa")
+
+[connection signal="body_entered" from="Change_scene" to="Change_scene" method="_on_body_entered"]
