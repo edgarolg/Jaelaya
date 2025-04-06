@@ -1,10 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://gq08qd4ymrvo"]
+[gd_scene load_steps=10 format=3 uid="uid://gq08qd4ymrvo"]
 
 [ext_resource type="Texture2D" uid="uid://b433b5h736sgb" path="res://assets/cinematic/driving1.PNG" id="1_dyryu"]
+[ext_resource type="PackedScene" uid="uid://d0mxynmikx506" path="res://scenes/caveEntering/EnteringCave.tscn" id="1_jtacb"]
 [ext_resource type="Texture2D" uid="uid://dfhls7d37o2rs" path="res://assets/cinematic/driving2.PNG" id="2_jtacb"]
 [ext_resource type="Texture2D" uid="uid://b1kcc3mjv31lo" path="res://assets/cinematic/driving3.PNG" id="3_k7svt"]
 
 [sub_resource type="GDScript" id="GDScript_dyryu"]
+script/source = "extends Node
+
+@export var scene_to_change: PackedScene
+
+func _ready():
+	await get_tree().create_timer(3.0).timeout
+	get_tree().change_scene_to_packed(scene_to_change)
+"
 
 [sub_resource type="GDScript" id="GDScript_jtacb"]
 
@@ -50,6 +59,7 @@ _data = {
 
 [node name="AnimationOnCar" type="Node2D"]
 script = SubResource("GDScript_dyryu")
+scene_to_change = ExtResource("1_jtacb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_jtacb")
