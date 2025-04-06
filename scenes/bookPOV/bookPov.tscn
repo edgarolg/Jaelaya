@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dp81a3git0p3j"]
+[gd_scene load_steps=9 format=3 uid="uid://dp81a3git0p3j"]
 
 [ext_resource type="Script" uid="uid://bcm387s52r470" path="res://scenes/bookPOV/book_pov.gd" id="1_ayeji"]
 [ext_resource type="PackedScene" uid="uid://dlgfwusv8kw4v" path="res://scenes/caveRuning/CaveRun.tscn" id="2_w2bvv"]
 [ext_resource type="Texture2D" uid="uid://dt0cv30s34ikb" path="res://assets/environment/cave/background.jpg" id="3_ntbou"]
 [ext_resource type="Texture2D" uid="uid://325ydg28k18q" path="res://assets/environment/cave/libroAbierto.PNG" id="4_ntbou"]
+[ext_resource type="AudioStream" uid="uid://clfwcsg5dx3bq" path="res://assets/musica/musica_libro.mp3" id="5_34pa7"]
 
 [sub_resource type="Animation" id="Animation_34pa7"]
 resource_name = "BookZoom"
@@ -87,3 +88,7 @@ libraries = {
 }
 autoplay = "BookZoom"
 speed_scale = 0.9
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_34pa7")
+autoplay = true
