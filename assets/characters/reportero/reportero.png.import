@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ydcw8ksf3ba"
-path="res://.godot/imported/79 sin título_20250405152045.PNG-072cbb2617f21e1f92de421b6b3a7b7b.ctex"
+uid="uid://cfsc5byi0ep58"
+path="res://.godot/imported/reportero.png-d1e09d5946d48380fbe9d05141126679.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/79 sin título_20250405152045.PNG"
-dest_files=["res://.godot/imported/79 sin título_20250405152045.PNG-072cbb2617f21e1f92de421b6b3a7b7b.ctex"]
+source_file="res://assets/characters/reportero/reportero.png"
+dest_files=["res://.godot/imported/reportero.png-d1e09d5946d48380fbe9d05141126679.ctex"]
 
 [params]
 

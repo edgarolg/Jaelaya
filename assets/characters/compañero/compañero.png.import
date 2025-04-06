@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blrlppjqasqr3"
-path="res://.godot/imported/attack_Down.png-8fb91c25118fb0e9c3106a03b818d835.ctex"
+uid="uid://b82yeio8a6g0k"
+path="res://.godot/imported/compañero.png-677834e34275410f65b6a8e19a645b69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/attack_Down.png"
-dest_files=["res://.godot/imported/attack_Down.png-8fb91c25118fb0e9c3106a03b818d835.ctex"]
+source_file="res://assets/characters/compañero/compañero.png"
+dest_files=["res://.godot/imported/compañero.png-677834e34275410f65b6a8e19a645b69.ctex"]
 
 [params]
 
