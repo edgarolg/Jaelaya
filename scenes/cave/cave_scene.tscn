@@ -13713,19 +13713,19 @@ position = Vector2(669, 270)
 scale = Vector2(0.190948, 0.190948)
 texture = ExtResource("6_g7aaj")
 
+[node name="UntitledDesign(2)3" type="Sprite2D" parent="UntitledDesign(2)"]
+position = Vector2(7111.88, -73.3097)
+scale = Vector2(1.14595, 1.14595)
+texture = ExtResource("6_g7aaj")
+
 [node name="UntitledDesign(2)" type="Sprite2D" parent="UntitledDesign(2)"]
 position = Vector2(3367.41, 1309.26)
 scale = Vector2(1.07049, 1.07049)
 texture = ExtResource("6_g7aaj")
 
-[node name="UntitledDesign(2)" type="Sprite2D" parent="UntitledDesign(2)/UntitledDesign(2)"]
-position = Vector2(3497.9, -1291.53)
-scale = Vector2(1.07049, 1.07049)
-texture = ExtResource("6_g7aaj")
-
-[node name="UntitledDesign(2)" type="Sprite2D" parent="UntitledDesign(2)/UntitledDesign(2)/UntitledDesign(2)"]
-position = Vector2(4542.59, 1160.78)
-scale = Vector2(1.07049, 1.07049)
+[node name="UntitledDesign(2)2" type="Sprite2D" parent="UntitledDesign(2)"]
+position = Vector2(12317.5, 1256.88)
+scale = Vector2(1.22673, 1.22673)
 texture = ExtResource("6_g7aaj")
 
 [node name="UntitledDesign(3)" type="Sprite2D" parent="."]
