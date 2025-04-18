@@ -20,6 +20,7 @@ Clonar el repo
 Descargar godot
 abrir godot y abrir la carpeta como nuevo proyecto
 Disfrutar
+Tambien poner que se puede descargar en itchio, poner link e indicaciones de como
 
 ## 🛠️ Tecnologias Utilizadas
 - Godot Engine
