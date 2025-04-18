@@ -29,10 +29,10 @@ Tambien poner que se puede descargar en itchio, poner link e indicaciones de com
 - Muscia obtenida de Youtube Music
 
 ## 👨‍💻 Autores
-Desarrollado por [@edgarolg](https://github.com/edgarolg)
-Desarrollado por [@AnaEstrada-05](https://github.com/AnaEstrada-05)
-Arte creado por Daniela (ver si ponemos un link a una red social suya)
-Arte creado por Valeria (ver si ponemos un link a una red social suya)
+- Desarrollado por [@edgarolg](https://github.com/edgarolg)
+- Desarrollado por [@AnaEstrada-05](https://github.com/AnaEstrada-05)
+- Arte creado por Daniela (ver si ponemos un link a una red social suya)
+- Arte creado por Valeria (ver si ponemos un link a una red social suya)
 
 ## 📝 Licencia
 Este codigo pertenece a los autores, no se puede crear un juego basado ni en el codigo, en la historia o en las mecanicas de jugabilidad.
